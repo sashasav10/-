@@ -44,6 +44,89 @@
             width: 100%;
         }
     </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:['wordtree']});
+      google.charts.setOnLoadCallback(drawSimpleNodeChart);
+      function drawSimpleNodeChart() {
+        var data = google.visualization.arrayToDataTable(
+          [ ['Phrases'],
+['Faculty Website Structure
+Home Page
+Introduction to the faculty
+Latest news and events
+Links to faculty departments
+Featured research projects
+Departments
+Computer Science Department
+Computer Science Department: Courses offered (including Python programming)
+Computer Science Department: Faculty profiles and research areas
+Computer Science Department: Student resources (tutorials, projects)
+Computer Science Department: Research groups
+Computer Science Department: Artificial Intelligence
+Computer Science Department: Web Development
+Computer Science Department: Data Science
+Computer Science Department: Cybersecurity
+Computer Science Department: Events
+Computer Science Department: Python Coding Competitions
+Computer Science Department: AI Hackathons
+Engineering Department
+Engineering Department: Aerospace specialization (including SpaceX projects)
+Engineering Department: Research in space technology
+Engineering Department: Internship opportunities with SpaceX
+Engineering Department: Research groups
+Engineering Department: Aerospace Engineering
+Engineering Department: Rocket Propulsion
+Engineering Department: Satellite Technology
+Engineering Department: Space Exploration
+Engineering Department: Events
+Engineering Department: SpaceX Collaboration Symposium
+Engineering Department: Aerospace Engineering Conferences
+Research
+Python Programming
+Python Programming: Applications in data science, AI, and web development
+Python Programming: Faculty expertise in Python
+Python Programming: Python workshops and seminars
+Python Programming: Research projects
+Python Programming: Machine Learning with Python
+Python Programming: Natural Language Processing
+Python Programming: Web Framework Development
+Aerospace Engineering
+Aerospace Engineering: Collaborations with SpaceX
+Aerospace Engineering: Projects related to SpaceX technologies
+Aerospace Engineering: Publications on space exploration
+Aerospace Engineering: Research projects
+Aerospace Engineering: Rocket Design and Optimization
+Aerospace Engineering: Satellite Communication Systems
+Aerospace Engineering: Mars Colonization Studies
+Student Resources
+Student Resources: Academic advising
+Student Resources: Career opportunities (including SpaceX internships)
+Student Resources: Coding competitions and hackathons (Python-focused)
+Student Resources: Student organizations
+Student Resources: Python Enthusiasts Club
+Student Resources: Aerospace Engineering Society
+Student Resources: Robotics Club
+Student Resources: Space Exploration Team
+News & Events
+News & Events: Faculty achievements in Python and aerospace engineering
+News & Events: Visiting lectures from SpaceX engineers
+News & Events: Conferences on space technology and programming
+News & Events: Latest research publications']
+          ]
+        );
+        var options = {
+          wordtree: {
+            format: 'implicit',
+            type: 'double',
+            word: 'nation'
+          }
+        };
+        var wordtree = new google.visualization.WordTree(document.getElementById('wordtree_double'));
+        wordtree.draw(data, options);
+      }
+    </script>
+
 </head>
 <body>
     <header>
@@ -57,8 +140,9 @@
     </header>
 
     <section>
-        <h2>Introduction</h2>
-        <p>This is the homepage of our website. Feel free to explore!</p>
+        <h2>Варіант 6. Семантична мережа: структури сайту факультету. Семантичний аналіз тексту, за словами: Python, SpaceX
+</h2>
+        <p><div id="wordtree_double" style="width: 900px; height: 500px;"></div></p>
     </section>
 
     <footer>
